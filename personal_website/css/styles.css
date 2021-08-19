@@ -1,0 +1,36 @@
+body{
+    background-color: #FAF1E6;
+}
+
+hr{
+    border-style: dotted none none none;
+    border-color: grey;
+    border-width: 5px;
+    height: 0px;
+    width: 5%;
+    
+}
+
+h1{
+    color: #064420;
+}
+
+h3{
+    color: #064420;
+}
+
+#personal_photo{
+    height: 200px;
+    width: 200px;
+    border-radius: 100%;
+
+}
+
+/* .heading{
+    background-color: #E4EFE7;
+    width: 100%;
+} */
+
+/* a{
+    
+} */

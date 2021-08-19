@@ -1,0 +1,16 @@
+Steps to create a new git repository
+
+1- git init
+2- git add <file name>
+3- git commit -m "Write the message to define this save point"
+4- 
+
+
+
+
+
+
+
+git log                                     See the commits history
+git diff <file name>                        Command used to see what are the differences between the current version and the previous commited version
+git checkout <file name>                    Command used to revert to previous git versions

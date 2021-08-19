@@ -1,0 +1,78 @@
+/* 
+
+The order of choice between inline style, internal css and external css is:
+1- Inline style (if existent, will overwrite everything)
+2- Internal CSS
+3- External CSS 
+
+*/
+
+
+
+
+
+
+/*______________________________ TAG SELECTORS ______________________________  */
+
+
+body{
+    background-color: #FAF1E6;
+}
+
+h1{
+    color: #064420;
+}
+
+h3{
+    color: #064420;
+}
+
+
+
+
+
+
+
+/* ______________________________ CLASS SELECTORS ______________________________  */   
+
+/* Multiple entities can have the same class and the same entity can have multiple classes */
+
+
+.bacon{
+    background-color: green;
+    height: 150px;
+    width: 150px;
+}
+
+.broccoli{
+    background-color: red;
+    height: 150px;
+    width: 150px;
+}
+
+
+
+
+/* ______________________________ ID SELECTORS ______________________________  */
+
+/* Each entity can only have one id and no other entity can have that same id */
+
+
+#bacon_image{
+    border-radius: 100%;
+}
+
+
+
+
+/* ______________________________ SUDO CLASSES ______________________________  */
+
+/* The way the entity is dysplayed will change depending on the state they are. For example, if you hover over an image, it could change color for example. */
+
+img:hover{
+    background-color: gold;
+}
+
+#heading:hover{
+    color: red;
+}
