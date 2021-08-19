@@ -2,8 +2,14 @@ Steps to create a new git repository
 
 1- git init
 2- git add <file name>
-3- git commit -m "Write the message to define this save point"
-4- 
+3- git commit -m "Innitial commit"
+
+#up to this point the changes were saved in a local repository
+
+4- git remote add origin https://github.com/ClenioCampolina/web_development.git
+5- git push -u origin master
+
+#now your file were saved in the remote repository too
 
 
 
@@ -11,6 +17,61 @@ Steps to create a new git repository
 
 
 
-git log                                     See the commits history
-git diff <file name>                        Command used to see what are the differences between the current version and the previous commited version
-git checkout <file name>                    Command used to revert to previous git versions
+
+
+git init                                                                            initiate git repository
+git add <file name>                                                                 add files to staging area
+git commit -m "Write the message to define this save point"                         commit changes to local repository (the -m indicates you want to add a messgae that is anYting "")
+git remote add origin https://github.com/ClenioCampolina/web_development.git        You create a remote repository "address" called "origin" and its web address is ttps://github.com/ClenioCampolina/web_development.git  (in other words, you tell to this git instance that you want to add a remote address for this local directory and its name will be origin and its location in the web is the defined depository in Github)
+git push -u origin master                                                           You push the commited data in the local repository to a remote one called origin to the branch called master. The -u flag tells git to link both local and remote repositories so that in the future you can one type "git push" and git know to which remote depository it should push the data.
+
+git log                                                                             See the commits history
+git diff <file name>                                                                Command used to see what are the differences between the current version and the previous commited version
+git checkout <file name>                                                            Command used to revert to previous git versions (the file )
+
+
+
+
+
+$ git config --global user.name                                                     // Add/Change the user name
+
+$ git config --global user.email                                                    // Add/Change the user email
+
+$ git add <file>                                                                    // Add a file to the staging area (where the file waits to be commited to the local repositories)
+
+$ git rm --cached <file>                                                            // Remove a file from the staging area
+
+$ git add *.txt                                                                     // Add any .txt file to the staging area
+
+$ git add .                                                                         // Add any file that is on that folder to the staging area
+
+$ git status                                                                        // Check the status of files in that directory (which files are in staged/not staged/untracked)
+
+$ git commit                                                                        // Commit change to the local repository. In this option will open a VIM editor. You will need to type "i" to be able to INSERT text and type in or uncomment (remove the #) the "Initial commit" line. Then click ESC to get out of the INSERT mode and type in ":wq" and press ENTER. That will do the commit. In case of doubt, this video shows an example https://www.youtube.com/watch?v=SWYqp7iY_Tc    
+
+$ git commit -m "first commit"                                                      // Commit change to the local repository. In this option you won't go inside the vVIM editor. You just add "-m" and a comment saying this is your first commit for that folder.
+
+$ git commit -m 'Add a comment'                                                     // Commit change to the local repository. In this option you won't go inside the vVIM editor. You just add "-m" and add any comment you want to define what changes you made.
+
+$ touch .gitignore                                                                  // This will create a .gitignore file in that folder. You can add name of files to this in a text editor (for example "log.txt") and git will automatically ignore those files when running commands. You can also add folders to the list so anything inside the folders will be included (for example "/folder_name")                              
+
+$ git branch name_of_branch                                                         // Create a branch on your git so you can make changes without worring with the master files (that other developers might be working on). Your branch will have a copy of all files but will can only see the changes if you are active in that branch (you can even have files in some branches that do not exist in the master).
+
+$ git checkout name_of_branch                                                       // Change to any desired branch
+
+$ git checkout master                                                               // Change back to the master branch
+
+$git merge name_of_branch                                                           // Merges the specified branch to the master branch. It will open the VIM editor as well. You will need to press "i" to INSERT text and type in any comment you want. Once finished, press ESC, type in ":wq" and press ENTER. The branch will be merged to the master.
+
+git add README.md                                                                   // Creating a "README.md" is a good to have as it will explain anyone what this project is about
+
+git branch -M main                                                                  // Probably changes your branch to the master (but I am not sure)
+
+$ git remote                                                                        // Lists all remote repositories from that folder
+
+$ git push                                                                          // Once the files on that folder were pushed to the remote repository for the first time, the next time you want to push any change or new file you only need to enter "git push"
+
+$ giot pull                                                                         // It will pull everything/ every changes form the remote repository to the local folder in case another dveloper made changes to any files in the remote repository (so you make sure you are working with the most up to date files)
+
+$ git clone https://github.com/henry-001/Networth_calculator.git                    // Clone files from a remote repository to a local folder
+
