@@ -17,6 +17,47 @@ Steps to create a new git repository
 
 
 
+Steps to create a new branch
+
+1- git branch <name of the new branch>                                              //creates the branch
+2- git branch                                                                       //you can check if the branch was created successfully
+3- git checkout <name of the branch you want to change to>                          //change to the new branch
+4- work on the files and make the changes you want
+5- git add .                                                                        //add the changed files to the staging mode
+6- git commit -m "message to describe the change made"                              //commit those changes to the new branch
+7- git log                                                                          //you can see the commit logs divided by branches 
+
+#to merge any other existing branch to the current branch
+
+8- git checkout master                                                              //change to the master branch
+9- git merge <name of the branch you want to merge to the master>
+10- :q!                                                                             //type ":q!" and press enter to confirm the merge (you could add a message at this point. please research that if needed)    
+11- git log                                                                         //the merge will appear in the logs
+12- git push origin master -u                                                       //if you want you can push it to the remote repository (origin is remote repository name, master is the branch on that remote repository and -u flag is link both the local and the remote repositories)
+
+
+
+
+
+
+
+
+Collaboration (forking and Pull requests) - contribute to open sorce projects
+
+1-
+2-
+3-
+4-
+5-
+
+
+
+
+
+
+
+
+
 
 
 git init                                                                            initiate git repository
@@ -29,7 +70,9 @@ git log                                                                         
 git diff <file name>                                                                Command used to see what are the differences between the current version and the previous commited version
 git checkout <file name>                                                            Command used to revert to previous git versions (the file )
 
-
+git branch                                                                          display all existing branches
+git branch <name of the new branch>                                                 add a new branch
+git checkout <name of another branch>                                               Switch to another branch
 
 
 
@@ -40,6 +83,8 @@ $ git config --global user.email                                                
 $ git add <file>                                                                    // Add a file to the staging area (where the file waits to be commited to the local repositories)
 
 $ git rm --cached <file>                                                            // Remove a file from the staging area
+
+$ git rm --cached -r .                                                              // Remove all files from the staging area (the -r flag stands for "recursive")
 
 $ git add *.txt                                                                     // Add any .txt file to the staging area
 
@@ -71,7 +116,10 @@ $ git remote                                                                    
 
 $ git push                                                                          // Once the files on that folder were pushed to the remote repository for the first time, the next time you want to push any change or new file you only need to enter "git push"
 
-$ giot pull                                                                         // It will pull everything/ every changes form the remote repository to the local folder in case another dveloper made changes to any files in the remote repository (so you make sure you are working with the most up to date files)
+$ git pull                                                                         // It will pull everything/ every changes from the remote repository to the local folder in case another dveloper made changes to any files in the remote repository (so you make sure you are working with the most up to date files)
 
-$ git clone https://github.com/henry-001/Networth_calculator.git                    // Clone files from a remote repository to a local folder
+$ git clone https://github.com/henry-001/Networth_calculator.git                    // Clone(copy or download to local environment) files from a remote repository to a local folder
 
+$ git fork
+
+$ git pull                                                                         // It will pull everything/ every changes from the remote repository to the local folder in case another dveloper made changes to any files in the remote repository (so you make sure you are working with the most up to date files)
